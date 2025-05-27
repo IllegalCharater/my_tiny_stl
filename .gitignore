@@ -1,0 +1,16 @@
+cmake-build-*/
+.idea/
+*.o
+*.obj
+*.log
+*.out
+*.exe
+*.app
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+.DS_Store
+Thumbs.db
+

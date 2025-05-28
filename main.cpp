@@ -1,9 +1,13 @@
-//
-// Created by alexrren on 25-5-27.
-//
 #include<iostream>
+#include "my_template.h"
 using namespace std;
 
 int main() {
-    cout<<"1"<<endl;
+    int a=1, b=2;
+    double c=1.1, d=2.2;
+    my_swap(a, b);
+    my_swap(c, d);
+    cout<<a<<" "<<b<<endl;
+    cout<<c<<" "<<d<<endl;
+    return 0;
 }

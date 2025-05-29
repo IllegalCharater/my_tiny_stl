@@ -12,6 +12,7 @@ public:
 
     my_vector(int len=0) :m_len(len),m_Data(nullptr),start(nullptr),pos(0) {
 
+
     }
 protected:
     iterator m_Data;//指向数据的指针

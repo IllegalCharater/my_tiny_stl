@@ -1,10 +1,7 @@
 #include<iostream>
 #include "my_template.h"
 #include "my_operator.h"
-
 using namespace std;
-
-
 
 int main() {
 

@@ -17,6 +17,7 @@ int main() {
     cout<<endl;
     for(int i:vec) {
         cout<<i<<" ";
+
     }
     cout<<endl;
     for(int i=0; i<vec.size(); i++) {

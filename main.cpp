@@ -37,6 +37,8 @@ public:
             delete[] m_Data;
             m_Data = new_data;
             m_len = new_len;
+            start=m_Data;
+
         }
         m_Data[pos++] = data;
     }
@@ -61,7 +63,7 @@ public:
     }
 
     reference operator[](int index) {
-        if(index<=pos)
+        if(index<pos)
             return m_Data[index];
         else {
             throw out_of_range("下标越界");
@@ -78,6 +80,7 @@ int main() {
     for (int i = 0; i < vec.capacity(); i++) {
         vec.push_back(i);
     }
+    vec.push_back(10);
     for(my_vector<int>::iterator it=vec.begin(); it!=vec.end();it++) {
         cout<<*it<<" ";
     }
@@ -92,7 +95,7 @@ int main() {
     cout<<endl;
     cout<<vec.size()<<endl;
     cout<<vec.capacity()<<endl;
-    cout<<vec[vec.size()+1]<<endl;
+    cout<<vec[vec.size()]<<endl;
     /*
     my_operator测试
     Complex a(1, 2), b(3, 4);

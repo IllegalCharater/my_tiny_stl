@@ -64,8 +64,7 @@ public:
         if(index<=pos)
             return m_Data[index];
         else {
-            printf("越界");
-            return 0;
+            throw out_of_range("下标越界");
         }
     }
 protected:
@@ -90,6 +89,10 @@ int main() {
     for(int i=0; i<vec.size(); i++) {
         cout<<vec[i]<<" ";
     }
+    cout<<endl;
+    cout<<vec.size()<<endl;
+    cout<<vec.capacity()<<endl;
+    cout<<vec[vec.size()+1]<<endl;
     /*
     my_operator测试
     Complex a(1, 2), b(3, 4);

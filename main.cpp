@@ -26,6 +26,7 @@ int main() {
     cout<<vec.size()<<endl;
     cout<<vec.capacity()<<endl;
     cout<<vec[vec.size()]<<endl;
+    cout<<vec;
     /*
     my_operator测试
     Complex a(1, 2), b(3, 4);

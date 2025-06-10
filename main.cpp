@@ -1,11 +1,32 @@
 #include<iostream>
-#include <vector>
 #include "my_template.h"
 #include "my_operator.h"
 #include "my_vector.h"
+#include "my_reference.h"
+#include "my_list.h"
 using namespace std;
 
 int main() {
+    int  a[5]={1,2,3,4,5};
+    printVec(a,a+5);
+    my_list<int>  list;
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+    printList(list.begin(),list.end());
+    /*my_reference测试
+    vector<Student> school;
+    //school.push_back(5);//一次构造一次拷贝
+    cout<<"-----------------"<<endl;
+    // Student stu(create_student());
+    // school.push_back(stu);//一次构造一次拷贝
+    cout<<"------------------"<<endl;
+    //school.push_back(create_student());//一次构造一次移动
+    cout<<"-------------------"<<endl;
+    Student stu(5);
+    school.push_back(std::move(stu));//移动语义
+    */
+    /*my_vector测试
     my_vector<int> vec(10);
     for (int i = 0; i < vec.capacity(); i++) {
         vec.push_back(i);
@@ -27,6 +48,8 @@ int main() {
     cout<<vec.size()<<endl;
     cout<<vec.capacity()<<endl;
     cout<<vec[vec.size()]<<endl;
+    cout<<vec;
+    */
     /*
     my_operator测试
     Complex a(1, 2), b(3, 4);

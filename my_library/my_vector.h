@@ -68,6 +68,14 @@ public:
             return m_Data[0];
         }
     }
+
+    friend std::ostream& operator<<(std::ostream& out, const my_vector& vec) {
+        for (int i = 0; i < vec.pos; i++) {
+            out << vec.m_Data[i] << " ";
+        }
+        out << std::endl;
+        return out;
+    }
 protected:
     iterator m_Data;//指向数据的指针
     iterator start;//起始地址

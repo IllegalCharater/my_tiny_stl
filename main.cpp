@@ -2,50 +2,10 @@
 #include "my_template.h"
 #include "my_operator.h"
 #include "my_vector.h"
+#include "my_reference.h"
 using namespace std;
 
-class Student {
-public:
-    Student(int size=0) : size(size), name(nullptr) {
-        if(size> 0) {
-            name = new char[size];
-        }
-        cout<<"constructor"<<endl;
-    }
 
-    //拷贝构造函数  深拷贝
-    Student(const Student& stu) {
-        size = stu.size;
-        name=new char[size];
-        for (int i = 0; i < size; i++) {
-            name[i] = stu.name[i];
-        }
-        cout<<"copy constructor"<<endl;
-    }
-
-    //浅拷贝
-    //指针悬挂问题
-    //移动构造函数
-    Student(Student&& stu) {
-        size=stu.size;
-        name=stu.name;
-        stu.name=nullptr;
-        cout<<"move constructor"<<endl;
-    }
-
-    ~Student() {
-        delete[] name;
-        cout<<"delete"<<endl;
-    }
-
-private:
-    int size;
-    char* name;
-};
-
-Student create_student() {
-    return Student(5);
-}
 
 int main() {
     vector<Student> school;

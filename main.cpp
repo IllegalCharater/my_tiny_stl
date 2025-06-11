@@ -13,7 +13,9 @@ int main() {
     list.push_back(1);
     list.push_back(2);
     list.push_back(3);
-    printList(list.begin(),list.end());
+    printContiner(list.begin(),list.end());
+    list.pop_back();
+    printContiner(list.begin(),list.end());
     /*my_reference测试
     vector<Student> school;
     //school.push_back(5);//一次构造一次拷贝

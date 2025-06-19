@@ -4,9 +4,15 @@
 #include "my_vector.h"
 #include "my_reference.h"
 #include "my_list.h"
+#include "my_type_traits.h"
 using namespace std;
 
 int main() {
+    //my_type_traits测试
+    cout<<"int:"<<my_is_pointer<int>::value<<endl;
+    cout<<"int*:"<<my_is_pointer<int*>::value<<endl;
+    /*
+    my_list测试
     int  a[5]={1,2,3,4,5};
     printVec(a,a+5);
     my_list<int>  list;
@@ -16,7 +22,8 @@ int main() {
     printContiner(list.begin(),list.end());
     list.pop_back();
     printContiner(list.begin(),list.end());
-    /*my_reference测试
+    /*
+    my_reference测试
     vector<Student> school;
     //school.push_back(5);//一次构造一次拷贝
     cout<<"-----------------"<<endl;
@@ -28,7 +35,8 @@ int main() {
     Student stu(5);
     school.push_back(std::move(stu));//移动语义
     */
-    /*my_vector测试
+    /*
+    my_vector测试
     my_vector<int> vec(10);
     for (int i = 0; i < vec.capacity(); i++) {
         vec.push_back(i);
